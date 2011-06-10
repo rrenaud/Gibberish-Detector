@@ -14,17 +14,25 @@ python gib_detect.py
 
 my name is rob and i like to hack
 True
+
 is this thing working?
 True
+
 i hope so
 True
+
 t2 chhsdfitoixcv
 False
+
 ytjkacvzw
 False
+
 yutthasxcvqer
 False
+
 seems okay
 True
+
 yay!
 True
+
