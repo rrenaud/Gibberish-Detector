@@ -8,7 +8,7 @@ accepted_chars = 'abcdefghijklmnopqrstuvwxyz '
 pos = dict([(char, idx) for idx, char in enumerate(accepted_chars)])
 
 def normalize(line):
-    """ Return only the subset of chars from accepted_chars, this will keep
+    """ Return only the subset of chars from accepted_chars.
     This helps keep the  model relatively small by ignoring punctuation, 
     infrequenty symbols, etc. """
     return [c.lower() for c in line if c.lower() in accepted_chars]
