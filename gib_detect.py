@@ -7,4 +7,6 @@ model_data = pickle.load(open('gib_model.pki'))
 
 while True:
     l = raw_input()
-    print gib_detect_train.char_ent(l, model_data['mat']) > model_data['thresh']
+    model_mat = model_data['mat']
+    threshold = model_data['thresh']
+    print gib_detect_train.avg_transition_prob(l, model_mat) > threshold
