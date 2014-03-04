@@ -58,7 +58,7 @@ def train():
 
 def avg_transition_prob(l, log_prob_mat):
     """ Return the average transition prob from l through log_prob_mat. """
-    log_prob = 1.0
+    log_prob = 0.0
     transition_ct = 0
     for a, b in ngram(2, l):
         log_prob += log_prob_mat[pos[a]][pos[b]]
