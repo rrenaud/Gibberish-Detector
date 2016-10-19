@@ -43,5 +43,5 @@ So then given a string, it measures the probability of generating that string ac
 
 I then look at the amount of surprise per character for a few known good strings, and a few known bad strings, and pick a threshold between the most surprising good string and the least surprising bad string. Then I use that threshold whenever to classify any new piece of text.
 
-Peter Norvig, the director of Research at Google, has this nice talk about "The unreasonable effectiveness of data" here, http://www.youtube.com/watch?v=9vR8Vddf7-s. This insight is really not to try to do something complicated, just write a small program that utilizes a bunch of data and you can do cool things.
+Peter Norvig, the director of Research at Google, has this nice talk about "The unreasonable effectiveness of data" here, https://www.youtube.com/watch?v=yvDCzhbjYWs. This insight is really not to try to do something complicated, just write a small program that utilizes a bunch of data and you can do cool things.
 
