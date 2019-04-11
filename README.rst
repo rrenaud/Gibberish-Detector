@@ -12,12 +12,18 @@ Usage
 =====
 
 First train the model:
+  For python 2:
+  python gib_detect_train.py
 
-python gib_detect_train.py
+  For python 3:
+  python gib_detect_train_py3.py
 
 Then try it on some sample input
+  For python 2:
+  python gib_detect.py
 
-python gib_detect.py
+  For python 3:
+  python gib_detect_py3.py
 
 my name is rob and i like to hack True
 
