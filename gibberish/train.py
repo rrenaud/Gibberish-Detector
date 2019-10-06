@@ -32,7 +32,7 @@ def calculate_log_probs_mat(input_path):
     # prior or smoothing factor.  This way, if we see a character transition
     # live that we've never observed in the past, we won't assume the entire
     # string has 0 probability.
-    counts = np.zeros((num_chars, num_chars), dtype=np.uint32)
+    counts = np.full((num_chars, num_chars), 10, dtype=np.uint32)
 
     # Count transitions from big text file, taken from http://norvig.com/spell-correct.html
     _logger.info('Calculating transition counts...')
