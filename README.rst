@@ -13,11 +13,11 @@ Usage
 
 First train the model:
 
-python gib_detect_train.py
+python gibberish/train.py -i data/big.txt
 
 Then try it on some sample input
 
-python gib_detect.py
+python gibberish/detect.py
 
 my name is rob and i like to hack True
 
