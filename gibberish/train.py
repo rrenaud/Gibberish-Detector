@@ -1,9 +1,10 @@
 import argparse
+import os
 
 import numpy as np
 from nltk import ngrams
 
-from gibberish.config import ACCEPTED_CHARS, CHAR_TO_IDX, MODEL_FILE_PATH
+from gibberish.config import ACCEPTED_CHARS, CHAR_TO_IDX, DATA_DIR, MODEL_FILE_PATH
 from gibberish.logger import get_logger
 from gibberish.utils import avg_transition_prob, read_normalized_lines, save_model
 
@@ -14,8 +15,8 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--input', help='File with phrases', required=True)
     parser.add_argument('-o', '--output', default=MODEL_FILE_PATH, help='Output file for string log probabilities')
-    parser.add_argument('--bad', default='bad.txt', help='File with non-acceptable phrases')
-    parser.add_argument('--good', default='good.txt', help='File with acceptable phrases')
+    parser.add_argument('--bad', default=os.path.join(DATA_DIR, 'bad.txt'), help='File with non-acceptable phrases')
+    parser.add_argument('--good', default=os.path.join(DATA_DIR, 'good.txt'), help='File with acceptable phrases')
 
     return parser.parse_args()
 
