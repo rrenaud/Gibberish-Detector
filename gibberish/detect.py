@@ -12,6 +12,21 @@ def parse_args():
     return parser.parse_args()
 
 
+def is_gibberish(normalized_line, logs_probs_mat, prob_threshold):
+    """
+    Detects whether the line is gibberish or not.
+
+    :param normalized_line:
+    :param logs_probs_mat:
+    :param prob_threshold:
+    :return:
+    """
+    if avg_transition_prob(normalized_line, logs_probs_mat) >= prob_threshold:
+        return False
+    else:
+        return True
+
+
 if __name__ == '__main__':
     args = parse_args()
 
@@ -22,7 +37,7 @@ if __name__ == '__main__':
     for line in read_normalized_lines(args.input):
         print('Received line: {}'.format(line))
 
-        if avg_transition_prob(line, log_probs_mat) >= prob_threshold:
-            print('Okay')
-        else:
+        if is_gibberish(line, log_probs_mat, prob_threshold):
             print('Gibberish')
+        else:
+            print('Okay')
